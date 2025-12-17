@@ -19,3 +19,4 @@ VALUES
 """
 
 # ... keyin bu o'zgaruvchilarni (queries) bazaga ulanish orqali yuborasiz.
+

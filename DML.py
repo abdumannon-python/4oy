@@ -39,8 +39,3 @@
 # join orders o on c.customer_id=o.customer_id
 # where to_char(order_date,'YYYY')='1997'
 # group by c.contact_name
-
-
-
-
-

@@ -38,4 +38,24 @@
 # order by count(o.order_id) desc
 # limit 1;
 # 7-misol
+# select e.country,count(o.order_id) as son from orders o
+# natural join employees e
+# group by e.country
+# order by son desc
+# limit 1;
+# 8-misol
+# select c.contact_name,sum(quantity) from orders o
+# join order_details od on o.order_id=od.order_id
+# join customers c on o.customer_id=c.customer_id
+# where to_char(order_date,'YYYY')='1997'
+# group by c.contact_name
+# order by sum(quantity) desc
+# limit 1;
+# 9-misol
+# select p.product_name ,count(od.order_id) from products p
+# natural join order_details od
+# group by p.product_name
+# order by count(od.order_id) asc
+# limit 1;
+# 10-misol
 

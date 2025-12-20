@@ -24,3 +24,18 @@
 # -- group by extract(year from o.order_date),p.product_name,c.company_name,od.unit_price
 # -- order by sum(od.quantity) desc
 # -- limit 1;
+# 5-misol
+# select distinct on (c.category_name) c.category_name,p.product_name,count(od.order_id) from categories c
+# join products p on c.category_id=p.category_id
+# join order_details od on od.product_id=p.product_id
+# group by c.category_name,p.product_name
+# order by c.category_name,count(od.order_id) desc
+# 6-misol
+# select e.first_name,e.country,count(o.order_id) from orders o
+# natural join employees e
+# where e.country in('USA')
+# group by  e.first_name,e.country
+# order by count(o.order_id) desc
+# limit 1;
+# 7-misol
+
